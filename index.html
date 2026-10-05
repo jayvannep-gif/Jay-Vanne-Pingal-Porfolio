@@ -191,8 +191,10 @@
   </div>
   <!-- Contact form (sends to your email using Web3Forms) -->
   <form id="form">
-   <!-- EDIT: paste your Web3Forms access key below -->
+   <!-- Web3Forms access key (public key, safe to keep here) -->
    <input type="hidden" id="akey" value="d7beb20d-ad54-468f-b3a5-93405ae40a5a">
+   <!-- Spam trap: hidden from real visitors, bots tend to tick it -->
+   <input type="checkbox" id="botcheck" style="display:none" tabindex="-1" autocomplete="off">
    <input type="text" id="fname" placeholder="Your Name" required>
    <input type="email" id="femail" placeholder="Your Email" required>
    <textarea id="fmsg" placeholder="Your Message" required></textarea>
