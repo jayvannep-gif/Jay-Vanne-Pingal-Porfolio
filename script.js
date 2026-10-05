@@ -47,8 +47,8 @@ document.getElementById('form').onsubmit=async e=>{
   const data=await res.json();
   if(data.success){st.textContent='Message sent! Thank you.';st.style.color='#4ade80';e.target.reset();}
   else{throw new Error(data.message);}
- }catch(err){
-  st.textContent='Something went wrong. Please email me directly at jayvannep@gmail.com';
+  }catch(err){
+  st.textContent='Error: '+err.message+' (or email me at jayvannep@gmail.com)';
   st.style.color='#f87171';
  }
  btn.disabled=false;btn.textContent='Send Message';
